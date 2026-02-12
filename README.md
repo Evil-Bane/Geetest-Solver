@@ -65,6 +65,18 @@ except Exception as e:
     print("Failed to solve:", e)
 ```
 
+## 🔧 Troubleshooting
+
+### Python 3.13 Import Errors (`ddddocr`)
+
+If you encounter `ImportError: cannot import name 'DdddOcr'` after installation on Python 3.13+, run the provided patch script to resolve package conflicts:
+
+```bash
+python dev_tools/patch_ddddocr.py
+```
+
+This script fixes a known issue with `ddddocr` v1.6.0 file structure on newer Python versions.
+
 ## 📂 Project Structure
 
 *   `geetest_solver/`: Core package containing the solver logic.

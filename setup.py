@@ -14,5 +14,9 @@ setup(
         "pycryptodome",
         "ddddocr>=1.4.11"
     ],
+    include_package_data=True,
+    package_data={
+        "geetest_solver": ["models/*.onnx", "models/*.json"],
+    },
     python_requires=">=3.8",
 )

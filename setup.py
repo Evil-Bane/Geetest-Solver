@@ -12,7 +12,7 @@ setup(
         "numpy",
         "opencv-python-headless",
         "pycryptodome",
-        "ddddocr==1.4.11"  # Note: 1.6.0 might need patching
+        "ddddocr>=1.4.11"
     ],
     python_requires=">=3.8",
 )

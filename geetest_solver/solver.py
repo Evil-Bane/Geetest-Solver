@@ -114,6 +114,13 @@ class GeetestSolver:
                 self._fresh_challenge()
                 data = self.load_captcha()
                 self.lot_number = data["lot_number"]
+
+                # Dynamic type detection: use whatever GeeTest actually served
+                actual_type = data.get("captcha_type", self.risk_type)
+                if actual_type != self.risk_type:
+                    self._log(f"Server returned type '{actual_type}' (requested '{self.risk_type}'), adapting...")
+                    self.risk_type = actual_type
+
                 result = self.submit_captcha(data)
 
                 # Check if it's a fail result (dict with 'result': 'fail')

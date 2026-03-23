@@ -4,3 +4,9 @@ numpy>=1.24.0
 opencv-python-headless>=4.7.0
 pycryptodome>=3.17.0
 ddddocr>=1.4.11
+fastapi
+uvicorn
+phonenumbers
+fake-headers
+babel
+python-multipart
